@@ -14,11 +14,9 @@ fun {Counter InS}
    fun {Count InS Acc}
       case InS of
          nil then nil
-      [] H|T then
-         local Acc2 in
-            Acc2 = {ListAdd Acc H}
-            Acc2|{Count T Acc2}
-         end
+      [] H|T then Acc2 in
+         Acc2 = {ListAdd Acc H}
+         Acc2|{Count T Acc2}
       end
    end
 in
