@@ -1,3 +1,4 @@
+% Author: Benoît Legat
 declare
 %% Delay random time. Print job’s type. Bind the flag.
 proc {Job Type Flag}

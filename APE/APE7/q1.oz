@@ -1,3 +1,4 @@
+% Author: Benoît Legat
 declare
 fun lazy {Ints N} N|{Ints N+1} end
 fun lazy {Sum2 Xs Ys}

@@ -1,3 +1,4 @@
+% Author: Benoît Legat
 % Combinational logic:
 % Logic circuits that have no internal memory.
 % Their outputs are boolean functions of their inputs,

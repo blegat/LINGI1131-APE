@@ -1,3 +1,4 @@
+% Author: Benoît Legat
 declare
 fun {Counter InS}
    fun {ListAdd L E}

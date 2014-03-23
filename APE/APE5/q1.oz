@@ -1,3 +1,4 @@
+% Author: Benoît Legat
 declare
 fun {Numbers N I J}
    if N == 0 then

@@ -1,3 +1,4 @@
+% Author: Benoît Legat
 % Without Table, at second 36, the numbers of beers on the table is 5 !
 % With Table, Bar is blocked waiting on a free place on the table.
 declare
