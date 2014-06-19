@@ -43,6 +43,7 @@ in
    {NewPortObject F none}
 end
 
+% Inspired from http://www.forum-epl.be/viewtopic.php?p=80881#80881
 fun lazy {LDrop L N}
    {List.drop L N}.1
 end
