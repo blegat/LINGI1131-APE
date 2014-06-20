@@ -60,19 +60,7 @@ fun {NewPeer Next Id N}
                Ls
                NewState
             in
-               if {HasFeature State K} then
-                  Ls = {Arity State}
-               else
-                  Ls = K|{Arity State}
-               end
-               NewState = {MakeRecord dictionary Ls}
-               for L in {Arity State} do
-                  if L \= K then
-                     NewState.L = State.L
-                  end
-               end
-               NewState.K = V
-               NewState
+               {AdjoinAt State K V}
             end
          [] get(K X) then
             if {HasFeature State K} then
