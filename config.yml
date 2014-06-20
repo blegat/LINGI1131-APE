@@ -1,0 +1,26 @@
+input_base: .
+output_base: /home/blegat/Dropbox
+clients:
+  - name: EPL Backup
+    arguments: &args
+      type: [Examens, Interros]
+      year: [2011, 2012, 2013, 2014]
+      month: [Janvier, Juin, Août]
+      serie: [Mineure, Majeure]
+    input: &input
+      path_format: "{0}/{1}/{2}/{3}/INGI1131-{1}-{2}-{3}.pdf"
+      parameters:
+        - arg: type
+        - arg: year
+        - arg: month
+        - arg: serie
+    output:
+      path_format: EPL-Backup/{0}
+      parameters:
+        - &output_end
+          path_format: "Q6/OZ/{0}/{1}_{2}/INGI1131-{1}-{2}-{3}.pdf"
+          parameters:
+            - arg: type
+            - arg: year
+            - arg: month
+            - arg: serie

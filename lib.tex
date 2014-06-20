@@ -1,0 +1,97 @@
+\documentclass[11pt,a4paper]{article}
+
+% French
+\usepackage[utf8x]{inputenc}
+\usepackage[frenchb]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{ifthen}
+%\usepackage{parskip}
+%\setlength{parskip}{0cm}
+\setlength{\parindent}{0cm}
+
+% Color
+% cfr http://en.wikibooks.org/wiki/LaTeX/Colors
+\usepackage{color}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\definecolor{dkgreen}{rgb}{0.25,0.7,0.35}
+\definecolor{dkred}{rgb}{0.7,0,0}
+
+% Listing
+\usepackage{listings}
+\lstset{
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  basicstyle=\rm\small\ttfamily,
+  keywordstyle=\bfseries\color{dkred},
+  frame=single,
+  commentstyle=\color{gray}=small,
+  stringstyle=\color{dkgreen},
+  %backgroundcolor=\color{gray!10},
+  %tabsize=2,
+  rulecolor=\color{black!30},
+  %title=\lstname,
+  breaklines=true,
+  framextopmargin=2pt,
+  framexbottommargin=2pt,
+  extendedchars=true,
+  inputencoding=utf8x
+}
+\newcommand{\oz}{\textsc{Oz}}
+\newcommand{\java}{\textsc{Java}}
+\newcommand{\clang}{\textsc{C}}
+\newcommand{\keyword}{mot clef}
+
+% Math symbols
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+% Sets
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Rn}{\R^n}
+\newcommand{\Rnn}{\R^{n \times n}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\Kn}{\K^n}
+\newcommand{\Knn}{\K^{n \times n}}
+
+\usepackage{fullpage}
+
+% Questions
+\usepackage{xparse}
+\NewDocumentEnvironment{Question}{mm}
+{\subsection*{LINGI1131 -- Final examination\\Prof. Peter Van Roy\\\date}
+  \begin{flushright}
+    \begin{tabular}{|p{4.3cm}|p{7.4cm}|}
+      \hline
+      Last name & \\
+      \hline
+      First name & \\
+      \hline
+      Student number (NOMA) & \\
+      \hline
+    \end{tabular}
+  \end{flushright}
+\subsubsection*{Question #1 : #2 (5 pts)}}
+{\thispagestyle{empty}\clearpage}
+
+\NewDocumentEnvironment{Q1}{m}
+{\begin{Question}{1}{#1}
+{\it For this question, your points will be the maximum of the points of your answer and your points on the midterm.}
+
+}
+{\end{Question}}
+
+\NewDocumentEnvironment{Q2}{m}
+{\begin{Question}{2}{#1}}
+{\end{Question}}
+
+\NewDocumentEnvironment{Q3}{m}
+{\begin{Question}{3}{#1}}
+{\end{Question}}
+
+\begin{document}
